@@ -8,6 +8,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BrandLogo } from "@/components/ui/BrandLogo";
+import { StatusScreen } from "@/components/status/StatusScreen";
 import { site } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: site.url ? new URL(site.url) : undefined,
@@ -31,7 +32,11 @@ export default function RootLayout({
         </a>
         <Header logo={<BrandLogo className="header-logo" />} />
         <main id="main-content" tabIndex={-1}>
-          {children}
+          {process.env.SKOUT_MAINTENANCE === "1" ? (
+            <StatusScreen variant="maintenance" />
+          ) : (
+            children
+          )}
         </main>
         <Footer />
       </body>

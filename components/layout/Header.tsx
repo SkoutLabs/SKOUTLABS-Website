@@ -7,6 +7,7 @@ import { navigation } from "@/lib/site";
 export function Header({ logo }: { logo: React.ReactNode }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const header = useRef<HTMLElement>(null);
   const toggle = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -16,6 +17,22 @@ export function Header({ logo }: { logo: React.ReactNode }) {
     }
   }, [pathname]);
 
+  useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 761px)");
+    const closeMenu = () => setOpen(false);
+    const outside = (event: PointerEvent) => {
+      if (!header.current?.contains(event.target as Node)) closeMenu();
+    };
+    desktop.addEventListener("change", closeMenu);
+    document.addEventListener("pointerdown", outside);
+    window.addEventListener("popstate", closeMenu);
+    return () => {
+      desktop.removeEventListener("change", closeMenu);
+      document.removeEventListener("pointerdown", outside);
+      window.removeEventListener("popstate", closeMenu);
+    };
+  }, []);
+
   function handleNavigation(href: string) {
     setOpen(false);
     if (pathname === href) {
@@ -24,6 +41,7 @@ export function Header({ logo }: { logo: React.ReactNode }) {
   }
   return (
     <header
+      ref={header}
       className="site-header"
       onKeyDown={(event) => {
         if (event.key === "Escape" && open) {

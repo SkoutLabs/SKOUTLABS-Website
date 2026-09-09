@@ -109,6 +109,12 @@ npx playwright install chromium
 npm run test:browser
 ```
 
-The browser check covers all five pages at 360, 390, 768, 1440 and 1920 pixels, image loading, horizontal overflow, WCAG A/AA automated accessibility checks, mobile menu keyboard behaviour, navigation links, app anchors, metadata endpoints and the 404 page. Screenshots are saved in the ignored `artifacts/` directory. Set `SKOUT_TEST_URL` to test a different local server. Automated checks supplement manual review; they do not certify accessibility.
+The browser check covers the five main pages plus maintenance and missing-page screens at 320, 360, 390, 480, 768, 1024, 1440 and 1920 pixels, image loading, horizontal overflow, WCAG A/AA automated accessibility checks, mobile menu keyboard behaviour, navigation links, app anchors, metadata endpoints and the 404 page. Screenshots are saved in the ignored `artifacts/` directory. Set `SKOUT_TEST_URL` to test a different local server. Automated checks supplement manual review; they do not certify accessibility.
 
 Games are managed separately in `lib/games.ts` and rendered by `components/games/GamesSection.tsx`. Add another game to that list to include it in the games sections and Apps navigation. Leave store links null until available. Expedition Skout gameplay, platforms and release date have not been specified, so no claims about them are published.
+
+## Error screens and maintenance
+
+Missing URLs use the branded 404 screen. `app/error.tsx` catches page rendering errors with a retry action; `app/global-error.tsx` provides a standalone fallback for root-layout failures. These require the app to reach the browser: a complete hosting outage or first-visit offline connection needs a hosting-level fallback.
+
+Preview the maintenance screen at `/maintenance`. To show it across the site, set `SKOUT_MAINTENANCE=1` before building and deploying; unset it (or set to `0`) and rebuild to reopen. This works with both normal and static builds. The maintenance preview is excluded from indexing. For temporary downtime in production, configure your host to serve the maintenance page with HTTP 503 and a Retry-After header; the build-time screen alone does not change response status codes.

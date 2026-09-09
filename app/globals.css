@@ -1152,3 +1152,278 @@ svg {
     padding: 28px;
   }
 }
+
+/* Shared recovery screens. */
+.status-screen {
+  background: var(--skout-bone);
+  padding-block: clamp(48px, 8vw, 110px);
+  min-height: 65svh;
+  display: grid;
+  align-items: center;
+}
+.status-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: clamp(32px, 6vw, 90px);
+}
+.status-art {
+  position: relative;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background-image:
+    linear-gradient(#70877512 1px, transparent 1px),
+    linear-gradient(90deg, #70877512 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.status-icon {
+  width: 45%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid #70877555;
+  border-radius: 50%;
+  background: var(--skout-paper);
+  color: var(--skout-orange-dark);
+}
+.status-art-caption {
+  position: absolute;
+  bottom: 0;
+  font-size: 10px;
+  text-align: center;
+}
+.status-copy h1 {
+  font-size: clamp(36px, 4.5vw, 64px);
+}
+.status-help {
+  margin: 28px 0 0;
+  font-size: 13px;
+}
+.status-help a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+button.button {
+  cursor: pointer;
+}
+
+/* Allow content to shrink naturally within grid and flex layouts. */
+.container :where(div, article, nav) {
+  min-width: 0;
+}
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+.text-link {
+  min-height: 44px;
+  white-space: normal;
+}
+.footer-main nav a,
+.footer-main > div > a[href^="mailto:"] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.app-jump-links a {
+  align-items: center;
+  min-height: 44px;
+}
+@media (min-width: 761px) and (max-width: 1050px) {
+  .hero h1 {
+    font-size: clamp(44px, 5.9vw, 62px);
+  }
+  .primary-nav {
+    gap: 24px;
+  }
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .app-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .app-card p {
+    min-height: 0;
+  }
+  .contact-grid {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 24px;
+  }
+  .contact-card {
+    padding: 28px;
+  }
+  .game-copy {
+    padding: 28px;
+  }
+}
+@media (max-width: 760px) {
+  body {
+    font-size: 16px;
+  }
+  .primary-nav {
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .primary-nav a {
+    font-size: 15px;
+    min-height: 48px;
+  }
+  .primary-nav a[aria-current="page"] {
+    background: #70877512;
+    border-radius: 4px;
+  }
+  .hero h1 {
+    font-size: clamp(38px, 8.9vw, 64px);
+  }
+  .hero .lede,
+  .intro-copy p,
+  .section-heading .lede,
+  .values-grid p,
+  .home-cta p:not(.eyebrow),
+  .product-copy .lede,
+  .contact-aside p,
+  .principle-grid p {
+    font-size: 15px;
+  }
+  .button,
+  .hero .button {
+    font-size: 13px;
+    min-height: 48px;
+    padding-inline: 20px;
+    gap: 14px;
+  }
+  .footer-main p,
+  .footer-main a,
+  .small-copy,
+  .collection-note,
+  .game-copy .game-availability {
+    font-size: 13px;
+  }
+  .footer-bottom {
+    font-size: 11px;
+  }
+  .status {
+    font-size: 10px;
+  }
+  .app-jump-links {
+    gap: 10px;
+  }
+  .app-jump-links a {
+    font-size: 13px;
+    padding: 10px 14px;
+    border: 1px solid #aeb8a4;
+    border-radius: 5px;
+  }
+  .app-card-art {
+    height: auto;
+    aspect-ratio: 1.25;
+  }
+  .app-card-art .brand-logo {
+    width: 68%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+  .hero-art {
+    width: 100%;
+    max-width: 300px;
+  }
+  .hero-art-caption {
+    text-align: center;
+  }
+  .contact-section {
+    min-height: auto;
+  }
+  .email-address {
+    font-size: clamp(16px, 4.5vw, 24px);
+  }
+  .status-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .status-art {
+    width: min(60%, 240px);
+    justify-self: center;
+  }
+  .status-icon svg {
+    width: 45%;
+    height: auto;
+  }
+  .status-art-caption {
+    display: none;
+  }
+  .status-copy {
+    text-align: center;
+  }
+  .status-copy .lede {
+    margin-inline: auto;
+    font-size: 16px;
+  }
+  .status-copy .button-group {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+  .section {
+    padding-block: 48px;
+  }
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .button-group .button,
+  .home-cta > .button {
+    width: 100%;
+  }
+  .values-grid,
+  .principle-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .value-top {
+    padding-bottom: 16px;
+    margin-bottom: 18px;
+  }
+  .home-cta,
+  .contact-card,
+  .game-copy,
+  .app-card-body {
+    padding: 24px;
+  }
+  .home-cta h2 {
+    font-size: 28px;
+  }
+  .home-cta h2 br {
+    display: none;
+  }
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .footer-main nav {
+    gap: 4px 24px;
+  }
+  .footer-main .eyebrow {
+    margin-bottom: 8px;
+  }
+  .contact-section h1,
+  .legal-page h1 {
+    font-size: 36px;
+  }
+  .status-help a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+@media (hover: none) {
+  .button:hover,
+  .app-card:hover {
+    transform: none;
+  }
+}

@@ -8,14 +8,26 @@ const context = await browser.newContext();
 const page = await context.newPage();
 const errors = [];
 page.on("pageerror", (error) => errors.push(error.message));
-const paths = ["/", "/about", "/apps", "/contact", "/privacy"];
+const paths = [
+  "/",
+  "/about",
+  "/apps",
+  "/contact",
+  "/privacy",
+  "/maintenance",
+  "/not-a-real-page",
+];
 await mkdir("artifacts", { recursive: true });
 try {
-  for (const width of [360, 390, 768, 1440, 1920]) {
+  for (const width of [320, 360, 390, 480, 768, 1024, 1440, 1920]) {
     await page.setViewportSize({ width, height: 950 });
     for (const route of paths) {
       const response = await page.goto(`${base}${route}`);
-      assert.equal(response.status(), 200, route);
+      assert.equal(
+        response.status(),
+        route === "/not-a-real-page" ? 404 : 200,
+        route,
+      );
       await page.locator("footer").scrollIntoViewIfNeeded();
       await page.evaluate(() =>
         Promise.all(Array.from(document.images).map((image) => image.decode())),
@@ -67,7 +79,27 @@ try {
     .click();
   await page.waitForURL(`${base}/apps`);
   assert.equal(await toggle.getAttribute("aria-expanded"), "false");
-  for (const name of ["Budget Skout", "Recipe Skout", "Travel Skout", "Expedition Skout"]) {
+  await toggle.click();
+  await page.locator("h1").click();
+  assert.equal(
+    await toggle.getAttribute("aria-expanded"),
+    "false",
+    "Outside tap closes menu",
+  );
+  await toggle.click();
+  await page.setViewportSize({ width: 1024, height: 844 });
+  await page.setViewportSize({ width: 390, height: 844 });
+  assert.equal(
+    await toggle.getAttribute("aria-expanded"),
+    "false",
+    "Resize clears mobile menu",
+  );
+  for (const name of [
+    "Budget Skout",
+    "Recipe Skout",
+    "Travel Skout",
+    "Expedition Skout",
+  ]) {
     await page
       .getByRole("navigation", { name: "Applications", exact: true })
       .getByRole("link", { name })
@@ -114,9 +146,24 @@ try {
     (await page.request.get(`${base}/not-a-real-page`)).status(),
     404,
   );
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(`${base}/not-a-real-page`);
+  await page.screenshot({
+    path: "artifacts/not-found-mobile.png",
+    fullPage: true,
+  });
+  await page.getByRole("link", { name: "Back to Home", exact: true }).click();
+  await page.waitForURL(`${base}/`);
+  await page.goto(`${base}/maintenance`);
+  await page.screenshot({
+    path: "artifacts/maintenance-mobile.png",
+    fullPage: true,
+  });
+  await page.getByRole("link", { name: "Check Again", exact: true }).click();
+  await page.waitForURL(`${base}/`);
   assert.deepEqual(errors, [], "No browser errors");
   console.log(
-    "PASS: 5 pages × 5 widths; accessibility; mobile navigation and Escape focus; app anchors; all internal links; images; metadata routes; 404; no browser exceptions.",
+    "PASS: 7 pages × 8 widths; accessibility; mobile navigation and Escape focus; app anchors; all internal links; images; metadata routes; 404; no browser exceptions.",
   );
 } finally {
   await browser.close();
