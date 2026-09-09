@@ -1,0 +1,35 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { apps } from "@/lib/apps";
+import { AppCard } from "@/components/apps/AppCard";
+import { Container } from "@/components/layout/Container";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+export function FeaturedApps() {
+  return (
+    <section className="section collection-section">
+      <Container>
+        <div className="section-top">
+          <SectionHeading
+            eyebrow="DIFFERENT ADVENTURES. ONE FAMILY."
+            title="The Skout Collection"
+          >
+            A little more clarity, inspiration and adventure in your everyday.
+          </SectionHeading>
+          <Link href="/apps" className="text-link">
+            Explore the collection
+            <ArrowUpRight size={17} aria-hidden="true" />
+          </Link>
+        </div>
+        <div className="app-grid">
+          {apps.map((app, index) => (
+            <AppCard key={app.id} app={app} index={index} />
+          ))}
+        </div>
+        <p className="collection-note">
+          Thoughtfully taking shape. All three applications are currently in
+          development.
+        </p>
+      </Container>
+    </section>
+  );
+}
