@@ -30,6 +30,9 @@
 @use "./pages/contact";
 @use "./pages/privacy";
 
+@use "./pages/journey";
+@use "./components/transitions";
+
 // Preserve the late container cascade, including the wide Privacy page width.
 // The rules remain owned by layout/_container.scss.
 @include container.responsive;

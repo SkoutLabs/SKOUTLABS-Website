@@ -9,9 +9,9 @@ export function HomeCTA() {
           <div>
             <p className="eyebrow">ALWAYS EXPLORING</p>
             <h2>
-              Building useful software,
+              Here’s to taking
               <br />
-              one adventure at a time.
+              the scenic route.
             </h2>
             <p>
               Skout Labs is continually exploring new ideas and developing

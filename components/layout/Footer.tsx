@@ -7,6 +7,12 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <Container>
+        <div className="footer-sendoff">
+          <span className="eyebrow">UNTIL THE NEXT ADVENTURE</span>
+          <Link href="/apps">
+            Keep exploring. <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
         <div className="footer-main">
           <div>
             <Link href="/" aria-label="SKOUT LABS home">

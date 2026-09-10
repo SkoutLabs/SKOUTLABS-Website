@@ -8,6 +8,7 @@ import "@fontsource/manrope/latin-800.css";
 import "./globals.css";
 import "@/styles/main.scss";
 import { Header } from "@/components/layout/Header";
+import { PageTransition } from "@/components/layout/PageTransition";
 import { Footer } from "@/components/layout/Footer";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { StatusScreen } from "@/components/status/StatusScreen";
@@ -34,11 +35,13 @@ export default function RootLayout({
         </a>
         <Header logo={<BrandLogo className="header-logo" />} />
         <main id="main-content" tabIndex={-1}>
-          {process.env.SKOUT_MAINTENANCE === "1" ? (
-            <StatusScreen variant="maintenance" />
-          ) : (
-            children
-          )}
+          <PageTransition>
+            {process.env.SKOUT_MAINTENANCE === "1" ? (
+              <StatusScreen variant="maintenance" />
+            ) : (
+              children
+            )}
+          </PageTransition>
         </main>
         <Footer />
       </body>

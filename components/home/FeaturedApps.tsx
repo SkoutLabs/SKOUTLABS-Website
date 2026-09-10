@@ -7,12 +7,12 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 /** Collection layout lives in styles/components/_app-card.scss; heading layout lives in _section-heading.scss. */
 export function FeaturedApps() {
   return (
-    <section className="section collection-section">
+    <section className="section collection-section" id="collection">
       <Container>
         <div className="section-top">
           <SectionHeading
-            eyebrow="DIFFERENT ADVENTURES. ONE FAMILY."
-            title="The Skout Collection"
+            eyebrow="YOUR EVERYDAY TRAVEL COMPANIONS."
+            title="Good company for the journey."
           >
             A little more clarity, inspiration and adventure in your everyday.
           </SectionHeading>

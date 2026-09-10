@@ -1,4 +1,5 @@
 import { pageMetadata, site } from "@/lib/site";
+import { HomeMotion } from "@/components/home/HomeMotion";
 import { Hero } from "@/components/home/Hero";
 import { IntroSection } from "@/components/home/IntroSection";
 import { FeaturedApps } from "@/components/home/FeaturedApps";
@@ -15,13 +16,13 @@ export const metadata = {
 };
 export default function Home() {
   return (
-    <>
+    <HomeMotion>
       <Hero />
       <IntroSection />
       <FeaturedApps />
       <GamesSection />
       <ValuesSection />
       <HomeCTA />
-    </>
+    </HomeMotion>
   );
 }
