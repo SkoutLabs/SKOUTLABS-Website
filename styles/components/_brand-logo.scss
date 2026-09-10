@@ -1,0 +1,28 @@
+// BrandLogo defaults. Placement-specific sizing stays with its owning module.
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.brand-wordmark {
+  font-weight: 800;
+  text-align: center;
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  color: var(--skout-ink);
+}
+.brand-wordmark small {
+  display: block;
+  color: var(--skout-orange-dark);
+  font-size: 0.35em;
+  letter-spacing: 0.26em;
+  margin-top: 8px;
+}

@@ -1,0 +1,18 @@
+// Reusable text links, hover feedback, and minimum touch target size.
+
+.text-link {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.text-link {
+  min-height: 44px;
+  white-space: normal;
+}

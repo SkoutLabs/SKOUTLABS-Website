@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { existsSync } from "node:fs";
 import path from "node:path";
+/** The shared .brand-logo styles in styles/components/_brand-logo.scss combine with placement-specific className sizing. */
 export function BrandLogo({
   src = "/assets/logos/skout-labs.png",
   name = "SKOUT LABS",

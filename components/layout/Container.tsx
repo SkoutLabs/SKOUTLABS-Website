@@ -1,3 +1,4 @@
+/** Shares responsive widths and gutters via .container in styles/layout/_container.scss; className adds layout-specific styles. */
 export function Container({
   children,
   className = "",

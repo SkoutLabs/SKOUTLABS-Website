@@ -6,6 +6,7 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 import { StatusBadge } from "@/components/apps/StatusBadge";
 import { Button } from "@/components/ui/Button";
 
+/** The .game-panel selectors in styles/pages/_games.scss provide the responsive artwork and copy layout. */
 export function GamesSection({ detail = false }: { detail?: boolean }) {
   return (
     <section

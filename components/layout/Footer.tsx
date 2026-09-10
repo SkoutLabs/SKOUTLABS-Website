@@ -2,6 +2,7 @@ import Link from "next/link";
 import { navigation, site } from "@/lib/site";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { Container } from "./Container";
+/** Footer selectors in styles/layout/_footer.scss control the navigation columns and mobile stacking. */
 export function Footer() {
   return (
     <footer className="site-footer">

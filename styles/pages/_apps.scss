@@ -1,0 +1,141 @@
+// Application navigation, product details, features, and screenshots.
+
+.app-1 .product-art {
+  background: #eee0ce;
+}
+.app-2 .product-art {
+  background: #e1e6db;
+}
+
+.app-jump-links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+.app-jump-links a {
+  font-size: 12px;
+  font-weight: 700;
+  border-bottom: 1px solid #aeb8a4;
+  padding-bottom: 8px;
+  display: flex;
+  gap: 28px;
+}
+.app-jump-links a:hover {
+  border-color: var(--skout-orange-dark);
+}
+.products {
+  padding-block: 30px 80px;
+}
+.product-section {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 80px;
+  align-items: center;
+  padding-block: 70px;
+  border-bottom: 1px solid var(--skout-line);
+  scroll-margin-top: 30px;
+}
+.product-section:last-child {
+  border-bottom: 0;
+}
+.product-art {
+  background: #e3e7dc;
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--skout-line);
+}
+.product-art .brand-logo {
+  width: 80%;
+  height: 80%;
+}
+.product-copy h2 {
+  margin: 20px 0;
+}
+.product-copy .lede {
+  font-size: 15px;
+}
+.product-copy h3 {
+  font-size: 14px;
+  letter-spacing: 0;
+  margin-top: 24px;
+}
+.feature-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  font-size: 13px;
+}
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.feature-list svg {
+  color: var(--skout-orange-dark);
+}
+.product-copy .small-copy {
+  margin-top: 22px;
+}
+.product-copy .button-group:empty {
+  display: none;
+}
+.screenshots {
+  display: flex;
+  overflow: auto;
+  gap: 16px;
+}
+.screenshots img {
+  width: 160px;
+  object-fit: contain;
+}
+@media (max-width: 1050px) {
+  .product-section {
+    gap: 40px;
+  }
+}
+@media (max-width: 760px) {
+  .product-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-block: 45px;
+  }
+  .product-art {
+    max-width: 450px;
+    width: 100%;
+    justify-self: center;
+  }
+  .product-copy h2 {
+    font-size: 36px;
+  }
+  .app-jump-links {
+    gap: 20px;
+  }
+  .app-jump-links a {
+    gap: 10px;
+    font-size: 11px;
+  }
+}
+.app-jump-links a {
+  align-items: center;
+  min-height: 44px;
+}
+@media (max-width: 760px) {
+  .product-copy .lede {
+    font-size: 15px;
+  }
+  .app-jump-links {
+    gap: 10px;
+  }
+  .app-jump-links a {
+    font-size: 13px;
+    padding: 10px 14px;
+    border: 1px solid #aeb8a4;
+    border-radius: 5px;
+  }
+}

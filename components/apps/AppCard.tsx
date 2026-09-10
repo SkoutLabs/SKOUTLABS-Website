@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import type { SkoutApp } from "@/lib/apps";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { StatusBadge } from "./StatusBadge";
+/** Shared .app-card styles live in styles/components/_app-card.scss; app-{index} selects the artwork colour. */
 export function AppCard({ app, index }: { app: SkoutApp; index: number }) {
   return (
     <article className={`app-card app-${index}`}>

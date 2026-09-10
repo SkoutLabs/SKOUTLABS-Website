@@ -1,3 +1,4 @@
+/** Layout lives in styles/components/_section-heading.scss; shared text styles live in globals/_typography.scss. */
 export function SectionHeading({
   eyebrow,
   title,

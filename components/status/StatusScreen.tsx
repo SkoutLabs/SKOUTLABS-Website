@@ -30,6 +30,7 @@ const screens = {
   },
 };
 
+/** Recovery screen styles live in styles/components/_status-screen.scss, loaded by both the root layout and global error fallback. */
 export function StatusScreen({
   variant,
   onRetry,

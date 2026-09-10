@@ -1,0 +1,36 @@
+// Keyboard focus, selection, skip navigation, and reduced-motion preferences.
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--skout-orange-dark);
+  outline-offset: 6px;
+  border-radius: 3px;
+}
+::selection {
+  background: var(--skout-orange);
+  color: #233c32;
+}
+.skip-link {
+  position: fixed;
+  left: 20px;
+  top: -100px;
+  padding: 10px 20px;
+  background: var(--skout-ink);
+  color: white;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

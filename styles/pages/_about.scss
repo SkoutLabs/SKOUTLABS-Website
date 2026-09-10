@@ -1,0 +1,85 @@
+// About page introduction, principles, and idea panel.
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+.about-logo {
+  max-width: 320px;
+  width: 100%;
+  aspect-ratio: 1;
+  justify-self: center;
+}
+.philosophy {
+  background: #e9ecdf;
+}
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  margin-top: 50px;
+}
+.principle-grid article {
+  border-top: 1px solid #bfc8b7;
+  padding-top: 25px;
+}
+.principle-grid h3 {
+  margin-top: 15px;
+}
+.principle-grid p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.idea-panel {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+  gap: 100px;
+}
+.idea-panel p {
+  max-width: 650px;
+}
+.location-label {
+  font-weight: 700;
+  font-size: 12px;
+}
+@media (max-width: 1050px) {
+  .idea-panel {
+    gap: 45px;
+  }
+}
+@media (max-width: 760px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .about-logo {
+    max-width: 250px;
+  }
+  .principle-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .idea-panel {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+@media (max-width: 390px) {
+  .principle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 760px) {
+  .principle-grid p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .principle-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

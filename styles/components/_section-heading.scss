@@ -1,0 +1,29 @@
+// Reusable section heading and its accompanying action layout.
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 38px;
+}
+.section-heading h2 {
+  margin-bottom: 16px;
+}
+.section-heading p:last-child {
+  margin-bottom: 0;
+}
+.section-heading .lede {
+  font-size: 14px;
+}
+@media (max-width: 760px) {
+  .section-top {
+    display: block;
+  }
+  .section-top > .text-link {
+    margin-top: 20px;
+  }
+  .section-heading .lede {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,97 @@
+// Contact card, email link, and supporting company details.
+
+.contact-section {
+  min-height: 740px;
+}
+.contact-section > .container > .lede {
+  max-width: 570px;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+  margin-top: 55px;
+}
+.contact-card {
+  padding: 45px;
+  background: var(--skout-bone);
+  border: 1px solid var(--skout-line);
+  border-radius: 8px;
+}
+.contact-card h2 {
+  margin-top: 30px;
+}
+.email-address {
+  font-size: clamp(16px, 2.3vw, 28px);
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0;
+  overflow-wrap: anywhere;
+}
+.contact-card .small-copy {
+  margin: 16px 0 0;
+}
+.contact-aside {
+  padding: 35px 25px;
+}
+.contact-aside h2 {
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  margin: 22px 0 10px;
+}
+.contact-aside h3 {
+  font-size: 18px;
+}
+.contact-aside p {
+  font-size: 14px;
+}
+.thin-divider {
+  height: 1px;
+  background: var(--skout-line);
+  margin: 32px 0;
+}
+@media (max-width: 760px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .contact-card {
+    padding: 28px;
+  }
+  .contact-aside {
+    padding: 25px 5px;
+  }
+  .contact-section h1 {
+    font-size: 42px;
+  }
+}
+@media (min-width: 761px) and (max-width: 1050px) {
+  .contact-grid {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 24px;
+  }
+  .contact-card {
+    padding: 28px;
+  }
+}
+@media (max-width: 760px) {
+  .contact-aside p {
+    font-size: 15px;
+  }
+  .contact-section {
+    min-height: auto;
+  }
+  .email-address {
+    font-size: clamp(16px, 4.5vw, 24px);
+  }
+}
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 24px;
+  }
+  .contact-section h1 {
+    font-size: 36px;
+  }
+}

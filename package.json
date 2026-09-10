@@ -11,7 +11,7 @@
     "build:static": "SKOUT_STATIC_EXPORT=1 next build",
     "check:assets": "node scripts/check-assets.mjs",
     "test:browser": "node scripts/browser-check.mjs",
-    "format": "prettier --write app components lib scripts"
+    "format": "prettier --write app components lib scripts styles"
   },
   "engines": {
     "node": ">=20.9.0"
@@ -33,6 +33,7 @@
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.3.4",
     "prettier": "^3.9.6",
+    "sass": "^1.104.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3"
   }

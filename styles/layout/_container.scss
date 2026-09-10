@@ -1,0 +1,58 @@
+// Reusable page widths, section spacing, and responsive layout defaults.
+
+.container {
+  max-width: 1240px;
+  margin-inline: auto;
+  width: calc(100% - 112px);
+}
+.section {
+  padding-block: 96px;
+}
+.page-hero h1 span {
+  color: #61765f;
+}
+
+.page-hero {
+  padding: 80px 0;
+  background: var(--skout-bone);
+}
+.page-hero .lede {
+  max-width: 650px;
+}
+
+// Emit after page modules: the wide container rule originally followed
+// .legal-page and overrides its max-width at 1600px and above.
+@mixin responsive {
+  @media (min-width: 1600px) {
+    .container {
+      max-width: 1320px;
+    }
+  }
+  @media (max-width: 1050px) {
+    .container {
+      width: calc(100% - 64px);
+    }
+  }
+  @media (max-width: 760px) {
+    .container {
+      width: calc(100% - 40px);
+    }
+    .section {
+      padding-block: 60px;
+    }
+    .page-hero {
+      padding: 55px 0;
+    }
+  }
+  .container :where(div, article, nav) {
+    min-width: 0;
+  }
+  @media (max-width: 480px) {
+    .container {
+      width: calc(100% - 32px);
+    }
+    .section {
+      padding-block: 48px;
+    }
+  }
+}

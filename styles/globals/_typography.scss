@@ -1,0 +1,61 @@
+// Shared text styles; contextual typography stays with its component or page.
+
+body {
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+h1 {
+  font-size: clamp(42px, 5.1vw, 74px);
+  margin-bottom: 26px;
+}
+h2 {
+  font-size: clamp(30px, 3.2vw, 44px);
+  margin-bottom: 24px;
+}
+h3 {
+  font-size: 23px;
+  letter-spacing: -0.035em;
+}
+p {
+  color: var(--skout-muted);
+  margin-bottom: 20px;
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--skout-muted);
+  line-height: 1.6;
+  margin-bottom: 23px;
+}
+.lede {
+  font-size: 17px;
+  line-height: 1.85;
+  max-width: 590px;
+}
+.small-copy {
+  font-size: 11px;
+  line-height: 1.8;
+}
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+@media (max-width: 760px) {
+  body {
+    font-size: 16px;
+  }
+  .small-copy {
+    font-size: 13px;
+  }
+}

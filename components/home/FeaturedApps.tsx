@@ -4,6 +4,7 @@ import { apps } from "@/lib/apps";
 import { AppCard } from "@/components/apps/AppCard";
 import { Container } from "@/components/layout/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+/** Collection layout lives in styles/components/_app-card.scss; heading layout lives in _section-heading.scss. */
 export function FeaturedApps() {
   return (
     <section className="section collection-section">

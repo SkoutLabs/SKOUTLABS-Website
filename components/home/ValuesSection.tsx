@@ -1,5 +1,6 @@
 import { Compass, Route, Layers3, Sunrise } from "lucide-react";
 import { Container } from "@/components/layout/Container";
+/** The .values-section and .values-grid rules in styles/pages/_home.scss handle colours and responsive columns. */
 export function ValuesSection() {
   const values = [
     {

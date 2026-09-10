@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+/** The .button and .button-secondary selectors in styles/components/_buttons.scss define the shared link-button variants. */
 export function Button({
   href,
   children,

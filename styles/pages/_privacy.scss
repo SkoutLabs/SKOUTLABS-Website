@@ -1,0 +1,30 @@
+// Privacy page typography and legal links.
+
+.legal-page {
+  max-width: 780px;
+}
+.legal-page h1 {
+  font-size: clamp(40px, 5vw, 60px);
+}
+.last-updated {
+  font-size: 12px;
+}
+.legal-page h2 {
+  font-size: 24px;
+  margin: 38px 0 15px;
+}
+.legal-page a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .legal-page .lede {
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .legal-page h1 {
+    font-size: 36px;
+  }
+}

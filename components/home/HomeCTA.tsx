@@ -1,5 +1,6 @@
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
+/** Uses shared section spacing and the .home-cta panel styles in styles/pages/_home.scss. */
 export function HomeCTA() {
   return (
     <section className="section">

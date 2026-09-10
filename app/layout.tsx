@@ -4,7 +4,9 @@ import "@fontsource/manrope/latin-500.css";
 import "@fontsource/manrope/latin-600.css";
 import "@fontsource/manrope/latin-700.css";
 import "@fontsource/manrope/latin-800.css";
+// Load shared class styles for every page and component.
 import "./globals.css";
+import "@/styles/main.scss";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BrandLogo } from "@/components/ui/BrandLogo";

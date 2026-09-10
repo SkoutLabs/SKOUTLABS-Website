@@ -4,7 +4,7 @@ A complete five-page company website for SKOUT LABS, a South African software co
 
 ## Stack
 
-Next.js App Router, React, strict TypeScript, Tailwind CSS v4, Lucide icons, and locally bundled Manrope. Pages are prerendered. There is no database, contact form, tracking, or application backend. Normal Next.js hosting provides image optimization; a portable static export is also supported.
+Next.js App Router, React, strict TypeScript, Tailwind CSS v4, Sass, Lucide icons, and locally bundled Manrope. Pages are prerendered. There is no database, contact form, tracking, or application backend. Normal Next.js hosting provides image optimization; a portable static export is also supported.
 
 ## Local setup
 
@@ -38,6 +38,11 @@ components/
   apps/                 Data-driven cards, product sections and status badges
   games/                Dedicated games showcase
   ui/                   BrandLogo, Button, SectionHeading
+styles/main.scss        Site stylesheet entry point (Sass @use)
+  globals/              Brand tokens, resets, typography and accessibility
+  layout/               Container, Header and Footer styles
+  components/           Reusable UI styles
+  pages/                Page-specific styles and their responsive rules
 lib/apps.ts             Application data and future links/screenshots
 lib/games.ts            Game data, status and future links
 lib/site.ts             Company contact, navigation, domain and metadata helper
@@ -47,7 +52,7 @@ scripts/check-assets.mjs Asset readiness check
 
 ## Brand colours and design
 
-Edit `app/globals.css`. The original `--skout-bone`, `--skout-teal`, and `--skout-orange` values also have Tailwind aliases (`bg-bone`, `text-teal`, etc.). Derived darker teal and orange colours provide readable text and focus states. Manrope fonts are bundled locally, so browsers do not contact Google Fonts.
+Edit brand tokens in `styles/globals/_variables.scss` and styles in the matching `styles/layout/`, `styles/components/`, or `styles/pages/` partial. Keep responsive rules in the partial they affect and retain their relative order. `styles/main.scss` loads the modules with Sass `@use`; brand defaults load before Header/Footer logo overrides to preserve equal-specificity behaviour. The container partial exposes its responsive rules through a mixin emitted after the page modules, preserving the original wide-screen Privacy page width. Components reference existing selectors through `className`. The entry point is imported in `app/layout.tsx` and separately in `app/global-error.tsx` because that fallback replaces the layout. Keep Tailwind imports and utility aliases in `app/globals.css`. The original `--skout-bone`, `--skout-teal`, and `--skout-orange` values also have Tailwind aliases (`bg-bone`, `text-teal`, etc.). Derived darker teal and orange colours provide readable text and focus states. Manrope fonts are bundled locally, so browsers do not contact Google Fonts.
 
 ## Applications
 

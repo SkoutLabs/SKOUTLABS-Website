@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { navigation } from "@/lib/site";
+/** Shared navigation styles in styles/layout/_header.scss use .is-open and aria-current for menu states. */
 export function Header({ logo }: { logo: React.ReactNode }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);

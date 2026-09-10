@@ -1,0 +1,151 @@
+// Application collection grid, cards, artwork labels, and colour variants.
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.app-card {
+  border: 1px solid var(--skout-line);
+  border-radius: 9px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  background: #fcf9f3;
+}
+.app-card:hover {
+  transform: translateY(-4px);
+}
+.app-card-art {
+  height: 280px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e3e7dc;
+}
+.app-1 .app-card-art {
+  background: #eee0ce;
+}
+.app-2 .app-card-art {
+  background: #e1e6db;
+}
+.app-card-art .brand-logo {
+  width: 210px;
+  height: 210px;
+}
+.app-card-art .brand-wordmark {
+  font-size: 32px;
+}
+.app-number {
+  position: absolute;
+  top: 20px;
+  left: 23px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #536353;
+}
+.art-caption {
+  position: absolute;
+  bottom: 18px;
+  font-size: 10px;
+  color: #536353;
+  letter-spacing: 0.04em;
+}
+.app-card-body {
+  padding: 26px;
+}
+.app-card h3 {
+  margin: 17px 0 12px;
+  font-size: 24px;
+}
+.app-card p {
+  font-size: 12px;
+  line-height: 1.85;
+  min-height: 88px;
+}
+.app-card .text-link {
+  font-size: 11px;
+}
+.collection-note {
+  font-size: 11px;
+  margin: 25px 0 0;
+  text-align: center;
+}
+// Responsive cards; keep the later mobile artwork refinements after the initial layout.
+@media (max-width: 1050px) {
+  .app-grid {
+    gap: 16px;
+  }
+  .app-card-body {
+    padding: 21px;
+  }
+  .app-card-art {
+    height: 240px;
+  }
+  .app-card-art .brand-logo {
+    width: 180px;
+    height: 180px;
+  }
+  .app-card p {
+    min-height: 115px;
+  }
+}
+@media (max-width: 760px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 490px;
+    margin-inline: auto;
+  }
+  .app-card-art {
+    height: 300px;
+  }
+  .app-card-art .brand-logo {
+    width: 230px;
+    height: 230px;
+  }
+  .app-card-body {
+    padding: 27px;
+  }
+  .app-card p {
+    min-height: 0;
+    font-size: 14px;
+  }
+  .app-card .text-link {
+    font-size: 12px;
+  }
+}
+@media (min-width: 761px) and (max-width: 1050px) {
+  .app-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .app-card p {
+    min-height: 0;
+  }
+}
+@media (max-width: 760px) {
+  .collection-note {
+    font-size: 13px;
+  }
+  .app-card-art {
+    height: auto;
+    aspect-ratio: 1.25;
+  }
+  .app-card-art .brand-logo {
+    width: 68%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+@media (max-width: 480px) {
+  .app-card-body {
+    padding: 24px;
+  }
+}
+
+@media (hover: none) {
+  .app-card:hover {
+    transform: none;
+  }
+}

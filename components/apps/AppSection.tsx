@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { Button } from "@/components/ui/Button";
 import { StatusBadge } from "./StatusBadge";
+/** The .product-section layout in styles/pages/_apps.scss shares artwork colours with AppCard. */
 export function AppSection({ app, index }: { app: SkoutApp; index: number }) {
   return (
     <section

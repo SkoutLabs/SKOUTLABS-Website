@@ -1,4 +1,5 @@
 import { Container } from "@/components/layout/Container";
+/** Combines shared section spacing with the .intro-grid layout in styles/pages/_home.scss. */
 export function IntroSection() {
   return (
     <section className="section intro-section">

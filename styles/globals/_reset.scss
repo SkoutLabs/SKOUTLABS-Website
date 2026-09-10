@@ -1,0 +1,38 @@
+// Document defaults and browser interaction resets.
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 105px;
+}
+body {
+  margin: 0;
+  background: var(--skout-paper);
+  color: var(--skout-ink);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+a,
+button {
+  touch-action: manipulation;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+svg {
+  flex-shrink: 0;
+}

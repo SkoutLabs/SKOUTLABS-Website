@@ -1,0 +1,35 @@
+// Global tokens, document defaults, typography, and accessibility.
+@use "./globals/variables";
+@use "./globals/reset";
+@use "./globals/typography";
+@use "./globals/accessibility";
+
+// Brand defaults must precede placement overrides: .header-logo img and
+// .brand-logo img have equal specificity, as do logo alignment classes.
+@use "./components/brand-logo";
+
+// Layout
+@use "./layout/container";
+@use "./layout/header";
+@use "./layout/footer";
+
+// Reusable components
+@use "./components/buttons";
+@use "./components/links";
+@use "./components/status-badge";
+@use "./components/section-heading";
+@use "./components/app-card";
+@use "./components/status-screen";
+
+// Pages: contextual styles follow shared defaults. Each partial keeps its
+// responsive rules in their original relative order, including repeated queries.
+@use "./pages/home";
+@use "./pages/about";
+@use "./pages/apps";
+@use "./pages/games";
+@use "./pages/contact";
+@use "./pages/privacy";
+
+// Preserve the late container cascade, including the wide Privacy page width.
+// The rules remain owned by layout/_container.scss.
+@include container.responsive;

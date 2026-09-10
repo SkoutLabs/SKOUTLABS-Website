@@ -1,0 +1,26 @@
+// Availability badge shared by applications and games.
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #cdd2bf;
+  background: #e9eddf;
+  padding: 3px 8px;
+  font-size: 8px;
+  letter-spacing: 0.035em;
+  font-weight: 700;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.status > span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--skout-ink);
+}
+@media (max-width: 760px) {
+  .status {
+    font-size: 10px;
+  }
+}

@@ -1,6 +1,7 @@
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/layout/Container";
+/** Hero artwork and responsive layout use the .hero selectors in styles/pages/_home.scss. */
 export function Hero() {
   return (
     <section className="hero">
