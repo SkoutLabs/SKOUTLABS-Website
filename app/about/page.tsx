@@ -46,7 +46,19 @@ export default function About() {
               <br />A clearer path through everyday life.
             </p>
           </div>
-          <BrandLogo className="about-logo" priority />
+          <aside className="studio-postcard">
+            <span className="eyebrow">A NOTE FROM THE STUDIO</span>
+            <h2>
+              Small beginnings.
+              <br />
+              Open horizons.
+            </h2>
+            <p>
+              We’re building useful things for real life, with a little room for
+              curiosity along the way.
+            </p>
+            <span className="studio-signature">Skout Labs · South Africa</span>
+          </aside>
         </Container>
       </section>
       <section className="section">

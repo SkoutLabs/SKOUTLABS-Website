@@ -35,6 +35,42 @@ export default function Apps() {
           </nav>
         </Container>
       </section>
+      <section className="collection-directory">
+        <Container>
+          <p className="eyebrow">CHOOSE YOUR DIRECTION</p>
+          <div className="directory-grid">
+            {["Everyday", "Travel"].map((group) => {
+              const members = apps.filter((app) => app.collection === group);
+              return (
+                <a
+                  key={group}
+                  href={`#${members[0]?.id}`}
+                  className="directory-card"
+                >
+                  <span className="eyebrow">
+                    {String(members.length).padStart(2, "0")} APPS
+                  </span>
+                  <h2>{group}</h2>
+                  <p>
+                    {group === "Everyday"
+                      ? "A little more ease in your daily routine."
+                      : "Good company, wherever you’re headed."}
+                  </p>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              );
+            })}
+            <a href="#games" className="directory-card">
+              <span className="eyebrow">
+                {String(games.length).padStart(2, "0")} GAME
+              </span>
+              <h2>Games</h2>
+              <p>A different kind of everyday adventure.</p>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </Container>
+      </section>
       <Container className="products">
         {apps.map((app, index) => (
           <AppSection key={app.id} app={app} index={index} />

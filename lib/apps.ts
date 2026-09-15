@@ -2,6 +2,8 @@ export interface SkoutApp {
   id: string;
   name: string;
   category: string;
+  collection: "Everyday" | "Travel" | "Games";
+  featured: boolean;
   tagline: string;
   description: string;
   logo: string;
@@ -15,6 +17,8 @@ export interface SkoutApp {
 export const apps: SkoutApp[] = [
   {
     id: "budget-skout",
+    collection: "Everyday",
+    featured: true,
     name: "Budget Skout",
     category: "A little more clarity",
     tagline: "Make room for what matters.",
@@ -36,6 +40,8 @@ export const apps: SkoutApp[] = [
   },
   {
     id: "recipe-skout",
+    collection: "Everyday",
+    featured: true,
     name: "Recipe Skout",
     category: "A little more inspiration",
     tagline: "Good food. All in one place.",
@@ -57,6 +63,8 @@ export const apps: SkoutApp[] = [
   },
   {
     id: "travel-skout",
+    collection: "Travel",
+    featured: true,
     name: "Travel Skout",
     category: "A little more adventure",
     tagline: "Less planning. More exploring.",

@@ -406,3 +406,209 @@
     transform: none;
   }
 }
+
+// Collection wayfinding scales independently of the featured homepage selection.
+.collection-horizon {
+  margin-top: 28px;
+  padding: 28px 32px;
+  border: 1px dashed var(--skout-teal);
+  border-radius: 16px;
+  background: var(--skout-bone);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 24px;
+  align-items: center;
+}
+.collection-horizon .eyebrow {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.collection-horizon h3 {
+  margin: 0;
+}
+.collection-horizon p {
+  margin: 0;
+  font-size: 14px;
+}
+.collection-horizon .text-link {
+  grid-column: 2;
+  grid-row: 2 / 4;
+}
+.collection-directory {
+  padding-block: 48px 16px;
+}
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.directory-card {
+  position: relative;
+  border: 1px solid var(--skout-line);
+  border-radius: 16px;
+  padding: 28px;
+  background: var(--skout-bone);
+  transition: background 200ms ease;
+}
+.directory-card:hover {
+  background: var(--skout-logo-background);
+}
+.directory-card h2 {
+  font-size: 28px;
+  margin: 18px 0 12px;
+}
+.directory-card p {
+  font-size: 14px;
+  margin: 0;
+}
+.directory-card > span:last-child {
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  font-size: 23px;
+}
+.game-art {
+  position: relative;
+  isolation: isolate;
+  min-height: 440px;
+  background: var(--skout-bone);
+  overflow: hidden;
+}
+.game-landscape {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.game-art .brand-logo {
+  max-width: 240px;
+  transform: rotate(-5deg);
+  border: 8px solid var(--skout-paper);
+  background: var(--skout-paper);
+  border-radius: 12px;
+  box-shadow: 8px 10px 0 color-mix(in srgb, var(--skout-ink) 20%, transparent);
+}
+.game-field-label,
+.game-field-caption {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+.game-field-label {
+  top: 24px;
+}
+.game-field-caption {
+  bottom: 24px;
+  color: var(--skout-paper);
+}
+.game-panel {
+  border-radius: 20px;
+}
+.studio-postcard {
+  padding: 36px;
+  border: 1px solid var(--skout-teal);
+  border-radius: 12px;
+  background: var(--skout-paper);
+  transform: rotate(3deg);
+  box-shadow: 10px 10px 0 color-mix(in srgb, var(--skout-teal) 15%, transparent);
+}
+.studio-postcard h2 {
+  font-size: clamp(28px, 3vw, 40px);
+}
+.studio-postcard p {
+  font-size: 14px;
+}
+.studio-signature {
+  display: block;
+  border-top: 1px dashed var(--skout-teal);
+  padding-top: 18px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.principle-grid article {
+  border-top-style: dashed;
+}
+@media (max-width: 760px) {
+  .hero-grid {
+    padding-top: 32px;
+    gap: 28px;
+  }
+  .hero .lede {
+    margin-top: 24px;
+  }
+  .hero .button-group {
+    margin-top: 22px;
+  }
+  .journey-art {
+    max-width: 380px;
+    padding-bottom: 48px;
+  }
+  .journey-map {
+    height: 350px;
+  }
+  .stop-discover {
+    top: 82px;
+  }
+  .stop-simplify {
+    top: 168px;
+  }
+  .stop-explore {
+    top: 253px;
+  }
+  .map-stop {
+    padding: 10px;
+  }
+  .journey-ticket {
+    bottom: -6px;
+    width: 240px;
+    padding: 10px 16px;
+  }
+  .journey-ticket strong {
+    font-size: 15px;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+  }
+  .hero-foot {
+    margin-top: 12px;
+  }
+  .collection-horizon {
+    padding: 24px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .collection-horizon .text-link {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .directory-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .directory-card {
+    padding: 22px;
+  }
+  .directory-card h2 {
+    margin-top: 10px;
+  }
+  .game-art {
+    min-height: 340px;
+  }
+  .game-art .brand-logo {
+    max-width: 190px;
+  }
+  .studio-postcard {
+    transform: rotate(1deg);
+    padding: 26px;
+    margin: 12px 6px;
+  }
+  .app-card-art {
+    aspect-ratio: 1.6;
+  }
+  .app-card-art .brand-logo {
+    width: 52%;
+  }
+}

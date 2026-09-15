@@ -4,6 +4,8 @@ import type { SkoutApp } from "./apps";
 export const games: SkoutApp[] = [
   {
     id: "expedition-skout",
+    collection: "Games",
+    featured: true,
     name: "Expedition Skout",
     category: "Games by Skout Labs",
     tagline: "A new direction for play.",

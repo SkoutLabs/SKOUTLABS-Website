@@ -31,7 +31,40 @@ export function GamesSection({ detail = false }: { detail?: boolean }) {
             aria-labelledby={`${game.id}-heading`}
           >
             <div className="game-art">
+              <span className="game-field-label">
+                FIELD NOTES / EXPEDITION SKOUT
+              </span>
+              <svg
+                className="game-landscape"
+                viewBox="0 0 600 500"
+                preserveAspectRatio="xMidYMax slice"
+                aria-hidden="true"
+              >
+                <circle cx="470" cy="90" r="46" fill="var(--skout-orange)" />
+                <path
+                  d="M0 360 130 160 235 300 365 110 600 360V500H0Z"
+                  fill="var(--skout-teal)"
+                />
+                <path
+                  d="m300 210 65-100 75 110-68-32-24 26Z"
+                  fill="var(--skout-bone)"
+                />
+                <path
+                  d="M0 405 160 285 320 405 490 260 600 360V500H0Z"
+                  fill="var(--skout-ink)"
+                />
+                <path
+                  d="M290 500Q480 435 330 400T390 325"
+                  fill="none"
+                  stroke="var(--skout-orange)"
+                  strokeWidth="3"
+                  strokeDasharray="8 9"
+                />
+              </svg>
               <BrandLogo src={game.logo} name={game.name} />
+              <span className="game-field-caption">
+                A LITTLE CURIOSITY GOES A LONG WAY.
+              </span>
             </div>
             <div className="game-copy">
               <StatusBadge status={game.status} />
