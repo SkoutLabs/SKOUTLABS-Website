@@ -4,7 +4,7 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 import { Button } from "@/components/ui/Button";
 export const metadata = pageMetadata(
   "About Skout Labs",
-  "Meet Skout Labs, a South African software company building thoughtful applications for everyday life.",
+  "Meet Skout Labs, an independent software studio building thoughtful applications for everyday life.",
   "/about",
 );
 const principles = [
@@ -57,7 +57,7 @@ export default function About() {
               We’re building useful things for real life, with a little room for
               curiosity along the way.
             </p>
-            <span className="studio-signature">Skout Labs · South Africa</span>
+            <span className="studio-signature">Skout Labs · Stay curious</span>
           </aside>
         </Container>
       </section>
@@ -70,7 +70,7 @@ export default function About() {
           </h2>
           <div className="intro-copy">
             <p>
-              SKOUT LABS is a South African software company focused on
+              SKOUT LABS is an independent software studio focused on
               designing and developing applications that help people discover,
               plan, organize and experience life.
             </p>
@@ -102,7 +102,7 @@ export default function About() {
           </div>
         </Container>
       </section>
-      <section className="section">
+      <section className="section idea-section">
         <Container className="idea-panel">
           <div>
             <p className="eyebrow">A NAME WITH DIRECTION</p>
@@ -115,9 +115,7 @@ export default function About() {
               helping users navigate everyday life with greater clarity. The
               compass in our identity is a reminder of that direction.
             </p>
-            <p className="location-label">
-              Based in South Africa. Built for everyday life.
-            </p>
+            <p className="idea-tagline">Built for everyday life.</p>
             <Button href="/apps">Meet the Skout Collection</Button>
           </div>
           <BrandLogo className="about-logo" />

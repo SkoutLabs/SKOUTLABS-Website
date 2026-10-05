@@ -1,6 +1,6 @@
 # SKOUT LABS website
 
-A complete five-page company website for SKOUT LABS, a South African software company. Includes Home, About, Apps, Contact, and a company-website-only Privacy Policy. Budget Skout, Recipe Skout, and Travel Skout are explicitly in development. Expedition Skout is featured separately as a game in development on Home and Apps.
+A complete five-page company website for SKOUT LABS, an independent software studio. Includes Home, About, Apps, Contact, and a company-website-only Privacy Policy. Budget Skout, Recipe Skout, and Travel Skout are explicitly in development. Expedition Skout is featured separately as a game in development on Home and Apps.
 
 ## Stack
 

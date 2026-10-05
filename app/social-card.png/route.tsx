@@ -31,7 +31,7 @@ export function GET() {
           Experience.
         </span>
         <span style={{ fontSize: 21, marginTop: 30 }}>
-          Thoughtful software. Made in South Africa.
+          Thoughtful software. Built for everyday life.
         </span>
       </div>
       {/* ImageResponse renders an embedded data image, not browser HTML. */}

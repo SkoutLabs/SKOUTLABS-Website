@@ -14,7 +14,7 @@ export function IntroSection() {
         </div>
         <div className="intro-copy">
           <p>
-            Skout Labs is a South African software company focused on creating
+            Skout Labs is an independent software studio focused on creating
             practical, beautifully designed applications for everyday life.
           </p>
           <p>

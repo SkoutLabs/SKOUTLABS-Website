@@ -1,4 +1,4 @@
-// Application collection grid, cards, artwork labels, and colour variants.
+// Application collection grid, cards, and artwork labels.
 
 .app-grid {
   display: grid;
@@ -21,13 +21,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e3e7dc;
+  background: var(--skout-app-logo-background);
 }
-.app-1 .app-card-art {
-  background: #eee0ce;
-}
-.app-2 .app-card-art {
-  background: #e1e6db;
+.app-card-art .brand-logo img {
+  mix-blend-mode: normal;
 }
 .app-card-art .brand-logo {
   width: 210px;

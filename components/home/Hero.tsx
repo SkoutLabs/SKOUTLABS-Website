@@ -38,7 +38,7 @@ export function Hero() {
               </Button>
             </div>
             <p className="hero-note">
-              Made with care in South Africa. Built for your everyday.
+              Made with care. Built for your everyday.
             </p>
           </div>
           <div className="journey-art">
@@ -129,8 +129,7 @@ export function Hero() {
         </div>
         <div className="hero-foot">
           <span>
-            <span className="tiny-marker" /> INDEPENDENT SPIRIT. SOUTH AFRICAN
-            ROOTS.
+            <span className="tiny-marker" /> INDEPENDENT SPIRIT. ENDLESS CURIOSITY.
           </span>
           <a href="#collection">
             Your adventure starts here{" "}

@@ -32,6 +32,12 @@
   font-size: 14px;
   margin-bottom: 0;
 }
+.idea-section {
+  background: var(--skout-logo-background);
+}
+.about-logo img {
+  mix-blend-mode: normal;
+}
 .idea-panel {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -41,7 +47,7 @@
 .idea-panel p {
   max-width: 650px;
 }
-.location-label {
+.idea-tagline {
   font-weight: 700;
   font-size: 12px;
 }

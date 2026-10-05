@@ -3,7 +3,7 @@ export const site = {
   name: "SKOUT LABS",
   email: "skoutlabs.dev@gmail.com",
   description:
-    "Skout Labs is a South African software company creating thoughtful everyday applications and games, including Budget, Recipe, Travel and Expedition Skout.",
+    "Skout Labs is an independent software studio creating thoughtful everyday applications and games, including Budget, Recipe, Travel and Expedition Skout.",
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || undefined,
 };
 if (site.url && !/^https?:\/\/[^/]+$/.test(site.url))

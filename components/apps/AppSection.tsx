@@ -8,7 +8,7 @@ import { StatusBadge } from "./StatusBadge";
 export function AppSection({ app, index }: { app: SkoutApp; index: number }) {
   return (
     <section
-      className={`product-section app-${index}`}
+      className="product-section"
       id={app.id}
       aria-labelledby={`${app.id}-title`}
     >

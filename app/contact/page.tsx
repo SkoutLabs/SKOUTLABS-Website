@@ -4,7 +4,7 @@ import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 export const metadata = pageMetadata(
   "Contact Skout Labs",
-  "Get in touch with Skout Labs in South Africa about our company or applications.",
+  "Get in touch with Skout Labs about our company or applications.",
   "/contact",
 );
 export default function Contact() {
